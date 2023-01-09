@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Aulas</h1>
+    <ul>
+        {% for Aula in object_list %}
+            <li> 
+                <a href="{% url 'checkin' Aula.pk %}">{{Aula.titulo}}</a>- {{Aula.instrutor}} - {{Aula.data}}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
