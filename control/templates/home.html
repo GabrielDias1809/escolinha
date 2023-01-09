@@ -6,7 +6,7 @@
     <ul>
         {% for Aula in object_list %}
             <li> 
-                <a href="{% url 'checkin' Aula.pk %}">{{Aula.titulo}}</a>- {{Aula.instrutor}} - {{Aula.data}}
+                <a href="{% url 'checkin' Aula.pk %}">{{Aula.titulo}}</a>- {{Aula.instrutor}} - {{Aula.data}}  {% if user.is_authenticated %}- <small><a href="{% url 'update_aula' Aula.pk %}">Editar</a></small> -  <small><a href="{% url 'delete_aula' Aula.pk %}">Deletar</a></small>{% endif %}
             </li>
         {% endfor %}
     </ul>

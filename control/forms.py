@@ -9,6 +9,5 @@ class AulaForm(forms.ModelForm):
         widgets = {
             'titulo': forms.TextInput(attrs={'class': 'form-control'}),
             'data': forms.DateInput(attrs={'class': 'form-control'}),
-            'hora' : forms.TimeInput(attrs={'class':'form-control'}),
             'instrutor': forms.Select(attrs={'class': 'form-control'}),
         }

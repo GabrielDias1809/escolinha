@@ -7,7 +7,6 @@ from django.urls import reverse
 class Aula(models.Model):
     titulo = models.CharField(max_length=255)
     data = models.DateTimeField()
-    hora = models.TimeField()
     instrutor = models.ForeignKey(User, on_delete=models.CASCADE,)
 
     def __str__(self):

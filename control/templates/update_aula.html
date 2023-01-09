@@ -1,18 +1,17 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if user.is_authenticated %}
 
+{% if user.is_authenticated %}
     <h1>Adicionar aula</h1>
 
     <div class="form-group"></div>
         <form method="POST">
             {% csrf_token %}
             {{ form.as_p }}
-        <button class="btn btn-success">Criar</button>
+        <button class="btn btn-warning">Editar</button>
         </form>
     </div>
-
 {% else %}
     <br/>
     Você não é permitido aqui
